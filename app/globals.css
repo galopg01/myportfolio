@@ -5,17 +5,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-inter: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --font-inter: Inter, sans-serif;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  font-feature-settings: "ss03","cv02","cv11";
 }
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: "InterVariable"; }
+}
+
