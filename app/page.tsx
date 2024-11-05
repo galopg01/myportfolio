@@ -1,9 +1,12 @@
 "use client";
 import { useState } from "react";
 import "./globals.css";
-// @ts-ignore
+// @ts-expect-error react-scroll not being detected
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
+import Section from "@/components/Section";
+import ExternalLink from "@/components/ExternalLink";
+import WorkCard from "@/components/WorkCard";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
@@ -123,336 +126,101 @@ export default function Home() {
             </ul>
           </header>
           <main className="pt-24 lg:w-1/2 lg:py-24">
-            <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About</h2>
-              <p className="mt-4 text-slate-400">Descripción sobre la carrera profesional y experiencia.</p>
-              <p>sdfdsssssssssssssssssssssssssssssssssssssssssssssss
-                asdfaf
-                asdfafasdf
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-              </p>
-            </section>
-            <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
-              <p className="mt-4 text-slate-400">Descripción de la experiencia profesional.</p>
-              <p>sdfdssssssssssssssssssssssssssssssssssssssss
-                asdfaf
-                asdfafasdf
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfgddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-              </p>
-            </section>
-            <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
-              <p className="mt-4 text-slate-400">Descripción de los proyectos realizados.</p>
-              <p>sdfdssssssssssssssssssssssssssssssssssssssssss
-                asdfaf
-                asdfafasdf
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                ddafsdf
-                gfd
-                gsfdg
-                fsd
-                sd
-                sgf
-                dfg
-                dfg
-                dfg
-                fdgs
-                sdgf
-                sdagf
-                s
-                dsfdasg
-                dsfdasgasdgf
-                afdg
-                ag
-                sdgfadg
-                agrf
-                sdf
-                afdgadrgf
-                afdgadrgfadg
-                dsfdasgasdgf
-                sdgfadgfg
-                fg
-                dfg
-                sdgf
-                dfg
-                
-              </p>
-            </section>
+            <Section id="about" title="About">
+              <p>Hello! I`m Galo, a passionate software engineering and artificial intelligence enthusiast. I studied for a degree in Software Engineering at the University of Málaga, where I received the Extraordinary Award for the best academic record, and a Master`s degree in Software Engineering and Artificial Intelligence at the same university.
+                My goal is to contribute to the development of innovative technological solutions that optimize processes and improve efficiency across various industries. During my studies and work experience, I have acquired skills in application design and development, process automation, database management, and machine learning model training.</p>             
+            </Section>
+            <Section id="experience" title="Experience">
+              <div>
+                <ol className="group/list">
+                  <li className="mb-12">
+                    <WorkCard period="Nov 2023 - Present"
+                              description={
+                                <>
+                                  Design and development of different personalized microservices for obtaining, managing and processing test case data, training of machine learning models and reordering of test cases.<br /><br />
+
+                                  Training machine learning models with the aim of:
+                                  <span style={{ display: 'block', marginLeft: '1em' }}>
+                                  • Obtaining the most influential characteristics on the duration of test cases to optimize execution time.<br />
+                                  • Predicting the execution time of test campaigns.
+                                  </span>
+                                </>
+                               }
+                              href="https://www.keysight.com/"
+                              label="Software Engineer - Keysight Technologies"
+                              ariaLabel="August 2023 to Present"
+                              workAriaLabel="Software Engineer at Keysight Technologies."
+                              techUsed={["Python", "TensorFlow", ".NET", "MySQL", "Jenkins", "Git"]}>
+                    </WorkCard>
+                  </li>
+                  <li className="mb-12">
+                    <WorkCard period="Aug - Nov 2023"
+                              description={
+                                <>
+                                  Design and development of a custom application for a renowned agricultural company with the purpose of:<br/>
+                                  <span style={{ display: 'block', marginLeft: '1em' }}>
+                                    • Facilitating the digitization of operations on farms, enhancing efficiency and sustainability in food cultivation.<br />
+                                    • Providing a treatment order management system, optimizing decision-making and quality control.<br />
+                                    • Strategic planning through process automation, improving productivity and profitability.
+                                  </span>
+                                  <br />
+                                  Docker cluster management.
+                                </>
+                               }
+                              href="https://www.tupl.com/"
+                              label="Junior Software Engineer - Tupl"
+                              ariaLabel="August to November 2023"
+                              workAriaLabel="Junior Software Engineer at Tupl"
+                              techUsed={["Python", "Java", "MongoDB", "FastAPI", "Kubernetes", "Git"]}>
+                    </WorkCard>
+                  </li>
+                  <li className="mb-12">
+                    <WorkCard period="Feb - Aug 2023"
+                              description={
+                                <>
+                                  Development and maintenance of the TuplOS platform. TuplOS is an Artificial Intelligence engine created by Tupl with the aim of simplifying the development of automation utilities and enabling the creation of a digital knowledge base for complex processes.
+                                  <br/><br />
+                                  Development of components for the retrieval and processing of satellite images, as well as for 
+                                  calculating statistics and histograms from them.<br/><br/>
+
+                                </>
+                               }
+                              href="https://www.tupl.com/"
+                              label="Intern Software Engineer - Tupl"
+                              ariaLabel="February to August 2023"
+                              workAriaLabel="Intern Software Engineer at Tupl"
+                              techUsed={["Python", "Java", "Docker", "Git"]}>
+                    </WorkCard>
+                  </li>
+                  <li className="mb-12">
+                    <WorkCard period="Feb - Aug 2023"
+                              description={
+                                <>
+                                  Creation of a system capable of recognizing a possible coronary disease from a segmented coronary angiogram in a specified number of windows. This system takes a coronary angiogram as input and provides the level of disease present in it as output. <br /><br />
+                                  Study of the system depending on the dataset, window size, and network architecture.
+                                </>
+                               }
+                              href="https://www.uma.es/"
+                              label="Researser - University of Málaga"
+                              ariaLabel="February to August 2023"
+                              workAriaLabel="Researcher at University of Málaga"
+                              techUsed={["Deep learning", "Pytorch", "Deep Neural Networks"]}>
+                    </WorkCard>
+                  </li>
+                </ol>
+              </div>
+              <div className="mt-12">
+                <ExternalLink href="/resume.pdf"
+                              ariaLabel="View Full Resume (opens in a new tab)"
+                              label="View Full Resume"
+                              insideCard={false}
+                              >         
+                </ExternalLink>
+              </div>
+            </Section>
+            <Section id="projects" title="Projects">
+              <p>Descripción de los proyectos realizados</p>
+            </Section>
           </main>
         </div>
       </div>
