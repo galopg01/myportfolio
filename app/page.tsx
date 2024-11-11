@@ -7,6 +7,149 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import ExternalLink from "@/components/ExternalLink";
 import WorkCard from "@/components/WorkCard";
+import EducationCard from "@/components/EducationCard";
+import ProjectCard from "@/components/ProjectCard";
+
+const workCards = [
+  {
+    period: "Nov 2023 - Present",
+    description: (
+      <>
+        Design and development of different personalized microservices for obtaining, managing and processing test case data, training of machine learning models and reordering of test cases.<br /><br />
+        Training machine learning models with the aim of:
+        <span style={{ display: 'block', marginLeft: '1em' }}>
+          • Obtaining the most influential characteristics on the duration of test cases to optimize execution time.<br />
+          • Predicting the execution time of test campaigns.
+        </span>
+      </>
+    ),
+    href: "https://www.keysight.com/",
+    label: "Software Engineer - Keysight Technologies",
+    ariaLabel: "August 2023 to Present",
+    workAriaLabel: "Software Engineer at Keysight Technologies.",
+    techUsed: ["Python", "TensorFlow", ".NET", "MySQL", "Jenkins", "Git"]
+  },
+  {
+    period: "Aug - Nov 2023",
+    description: (
+      <>
+        Design and development of a custom application for a renowned agricultural company with the purpose of:<br/>
+        <span style={{ display: 'block', marginLeft: '1em' }}>
+          • Facilitating the digitization of operations on farms, enhancing efficiency and sustainability in food cultivation.<br />
+          • Providing a treatment order management system, optimizing decision-making and quality control.<br />
+          • Strategic planning through process automation, improving productivity and profitability.
+        </span>
+        <br />
+        Docker cluster management.
+      </>
+    ),
+    href: "https://www.tupl.com/",
+    label: "Junior Software Engineer - Tupl",
+    ariaLabel: "August to November 2023",
+    workAriaLabel: "Junior Software Engineer at Tupl",
+    techUsed: ["Python", "Java", "MongoDB", "FastAPI", "Kubernetes", "Git"]
+  },
+  {
+    period: "Feb - Aug 2023",
+    description: (
+      <>
+        Development and maintenance of the TuplOS platform. TuplOS is an Artificial Intelligence engine created by Tupl with the aim of simplifying the development of automation utilities and enabling the creation of a digital knowledge base for complex processes.
+        <br/><br />
+        Development of components for the retrieval and processing of satellite images, as well as for 
+        calculating statistics and histograms from them.<br/><br/>
+      </>
+    ),
+    href: "https://www.tupl.com/",
+    label: "Intern Software Engineer - Tupl",
+    ariaLabel: "February to August 2023",
+    workAriaLabel: "Intern Software Engineer at Tupl",
+    techUsed: ["Python", "Java", "Docker", "Git"]
+  },
+  {
+    period: "Feb - Aug 2023",
+    description: (
+      <>
+        Creation of a system capable of recognizing a possible coronary disease from a segmented coronary angiogram in a specified number of windows. This system takes a coronary angiogram as input and provides the level of disease present in it as output. <br /><br />
+        Study of the system depending on the dataset, window size, and network architecture.
+      </>
+    ),
+    href: "https://www.uma.es/",
+    label: "Researcher - University of Málaga",
+    ariaLabel: "February to August 2023",
+    workAriaLabel: "Researcher at University of Málaga",
+    techUsed: ["Python", "Pytorch", "Deep Neural Networks"]
+  }
+];
+
+const projectCards = [
+  {
+    href: "https://riuma.uma.es/xmlui/handle/10630/27595",
+    image: "/angiography.png",
+    label: "Conorary Disease Detection System",
+    ariaLabel: "",
+    description: (
+      <>
+        System capable of recognizing a possible coronary disease from a segmented coronary angiogram in a specified number of windows.  <br />
+        Study of the system depending on the dataset, window size, and network architecture.
+      </>
+    ),
+    techUsed: ["Python","Pytorch", "Deep Neural Networks"]
+  },
+  {
+    href: "https://github.com/galopg01/EpilepsyDetection",
+    image: "/mask.png",
+    label: "Epilepsy Detection System",
+    ariaLabel: "Epilepsy Detection System (opens in a new tab)",
+    description: (
+      <>
+        Machine learning-based system for early detection of epileptic seizures utilizing EEG 
+        (electroencephalogram) data. Leveraged Convolutional Neural Networks (CNN) and Recurrent Neural 
+        Networks (RNN) to analyze EEG signals and identify patterns indicative of epileptic seizures. <br />
+        The project aims to create a scalable and reliable system for timely epilepsy diagnosis and treatment in clinical settings.
+      </>
+    ),
+    techUsed: ["Python","Pytorch", "Deep Neural Networks"]
+  },
+  {
+    href: "/",
+    image: "/mask.png",
+    label: "Personal Website",
+    ariaLabel: "Personal Website (opens in a new tab)",
+    description: (
+      <>
+        Modern, responsive, and fast personal portfolio website using Next.js 14, TypeScript, and Tailwind CSS. 
+        The site emphasizes performance and accessibility, providing an engaging user experience across all devices.
+      </>
+    ),
+    techUsed: ["Python","Pytorch", "Deep Neural Networks"]
+  }
+];
+
+const educationCards = [
+  {
+    period: "2019 - 2023",
+    center: "University of Málaga",
+    label: "Bachelor's Degree in Software Engineering",
+    description: (
+      <>
+        Extraordinary Award for the best academic record. <br/><br/>
+        GPA: 9.01/10
+      </>
+    ),
+    ariaLabel: "Bachelor's Degree in Software Engineering at University of Málaga",
+  },
+  {
+    period: "2023 - 2024",
+    center: "University of Málaga",
+    label: "Master's Degree in Software Engineering and Artificial Intelligence",
+    ariaLabel: "Master's Degree in Software Engineering and Artificial Intelligence at University of Málaga",
+    description: (
+      <>
+      </>
+    )
+  }
+];
+
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
@@ -95,6 +238,23 @@ export default function Home() {
                       </span>
                     </ScrollLink>
                   </li>
+                  <li>
+                    <ScrollLink
+                      className="group flex items-center py-3 cursor-pointer"
+                      to="education"
+                      smooth={true}
+                      duration={500}
+                      offset={-100}
+                      spy={true}
+                      onSetActive={() => handleSetActiveSection("education")}
+                    >
+                      <span className={`nav-indicator ${activeSection === "education" ? "w-16 bg-slate-200" : "w-8 bg-slate-600"} mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}>
+                      </span>
+                      <span className={`nav-text text-xs font-bold uppercase tracking-widest ${activeSection === "education" ? "text-slate-200" : "text-slate-500"} group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                        Education
+                      </span>
+                    </ScrollLink>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -133,80 +293,11 @@ export default function Home() {
             <Section id="experience" title="Experience">
               <div>
                 <ol className="group/list">
-                  <li className="mb-12">
-                    <WorkCard period="Nov 2023 - Present"
-                              description={
-                                <>
-                                  Design and development of different personalized microservices for obtaining, managing and processing test case data, training of machine learning models and reordering of test cases.<br /><br />
-
-                                  Training machine learning models with the aim of:
-                                  <span style={{ display: 'block', marginLeft: '1em' }}>
-                                  • Obtaining the most influential characteristics on the duration of test cases to optimize execution time.<br />
-                                  • Predicting the execution time of test campaigns.
-                                  </span>
-                                </>
-                               }
-                              href="https://www.keysight.com/"
-                              label="Software Engineer - Keysight Technologies"
-                              ariaLabel="August 2023 to Present"
-                              workAriaLabel="Software Engineer at Keysight Technologies."
-                              techUsed={["Python", "TensorFlow", ".NET", "MySQL", "Jenkins", "Git"]}>
-                    </WorkCard>
+                {workCards.map((workCard, index) => (
+                  <li key={index} className="mb-12">
+                    <WorkCard {...workCard} />
                   </li>
-                  <li className="mb-12">
-                    <WorkCard period="Aug - Nov 2023"
-                              description={
-                                <>
-                                  Design and development of a custom application for a renowned agricultural company with the purpose of:<br/>
-                                  <span style={{ display: 'block', marginLeft: '1em' }}>
-                                    • Facilitating the digitization of operations on farms, enhancing efficiency and sustainability in food cultivation.<br />
-                                    • Providing a treatment order management system, optimizing decision-making and quality control.<br />
-                                    • Strategic planning through process automation, improving productivity and profitability.
-                                  </span>
-                                  <br />
-                                  Docker cluster management.
-                                </>
-                               }
-                              href="https://www.tupl.com/"
-                              label="Junior Software Engineer - Tupl"
-                              ariaLabel="August to November 2023"
-                              workAriaLabel="Junior Software Engineer at Tupl"
-                              techUsed={["Python", "Java", "MongoDB", "FastAPI", "Kubernetes", "Git"]}>
-                    </WorkCard>
-                  </li>
-                  <li className="mb-12">
-                    <WorkCard period="Feb - Aug 2023"
-                              description={
-                                <>
-                                  Development and maintenance of the TuplOS platform. TuplOS is an Artificial Intelligence engine created by Tupl with the aim of simplifying the development of automation utilities and enabling the creation of a digital knowledge base for complex processes.
-                                  <br/><br />
-                                  Development of components for the retrieval and processing of satellite images, as well as for 
-                                  calculating statistics and histograms from them.<br/><br/>
-
-                                </>
-                               }
-                              href="https://www.tupl.com/"
-                              label="Intern Software Engineer - Tupl"
-                              ariaLabel="February to August 2023"
-                              workAriaLabel="Intern Software Engineer at Tupl"
-                              techUsed={["Python", "Java", "Docker", "Git"]}>
-                    </WorkCard>
-                  </li>
-                  <li className="mb-12">
-                    <WorkCard period="Feb - Aug 2023"
-                              description={
-                                <>
-                                  Creation of a system capable of recognizing a possible coronary disease from a segmented coronary angiogram in a specified number of windows. This system takes a coronary angiogram as input and provides the level of disease present in it as output. <br /><br />
-                                  Study of the system depending on the dataset, window size, and network architecture.
-                                </>
-                               }
-                              href="https://www.uma.es/"
-                              label="Researser - University of Málaga"
-                              ariaLabel="February to August 2023"
-                              workAriaLabel="Researcher at University of Málaga"
-                              techUsed={["Deep learning", "Pytorch", "Deep Neural Networks"]}>
-                    </WorkCard>
-                  </li>
+                ))}
                 </ol>
               </div>
               <div className="mt-12">
@@ -219,7 +310,26 @@ export default function Home() {
               </div>
             </Section>
             <Section id="projects" title="Projects">
-              <p>Descripción de los proyectos realizados</p>
+            <div>
+                <ol className="group/list">
+                {projectCards.map((projectCard, index) => (
+                  <li key={index} className="mb-12">
+                    <ProjectCard {...projectCard} />
+                  </li>
+                  ))}
+                </ol>
+              </div>
+            </Section>
+            <Section id="education" title="Education">
+              <div>
+                <ol className="group/list">
+                {educationCards.map((educationCard, index) => (
+                  <li key={index} className="mb-12">
+                    <EducationCard {...educationCard} />
+                  </li>
+                  ))}
+                </ol>
+              </div>
             </Section>
           </main>
         </div>

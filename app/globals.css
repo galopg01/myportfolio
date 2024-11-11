@@ -27,3 +27,8 @@ body {
   :root { font-family: "InterVariable"; }
 }
 
+.education-card {
+  border: 1px solid rgba(148, 163, 184, 0.4); /* Línea delgada con color sutil */
+  border-radius: 8px; /* Opcional: Bordes redondeados */
+  padding: 16px; /* Opcional: Espacio interno */
+}
