@@ -121,7 +121,7 @@ const projectCards = [
         The site emphasizes performance and accessibility, providing an engaging user experience across all devices.
       </>
     ),
-    techUsed: ["Python","Pytorch", "Deep Neural Networks"]
+    techUsed: ["TypeScript","Next.js", "Tailwind CSS"]
   }
 ];
 
