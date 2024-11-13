@@ -342,10 +342,11 @@ export default function Home() {
                   <br/>
                   Currently, I&apos;m a Software Engineer at 
                   <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.keysight.com/" target="_blank" rel="noreferrer noopener" aria-label="Keysight Technologies (opens in a new tab)"> Keysight Technologies </a>
-                  where I contribute to the creation and maintenance of different services, ensuring best practices to deliver an robust user experience.
+                  where I contribute to the creation and maintenance of different services, ensuring best practices to deliver a robust user experience.
                   <br/>
                   <br/>
-                  In the past, I&apos;ve had the opportunity to develop software across a variety of settings, from research institutions and large corporations to 
+                  In the past, I&apos;ve had the opportunity to develop software across a variety of settings, from
+                  <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.tupl.com/" target="_blank" rel="noreferrer noopener" aria-label="Tupl (opens in a new tab)"> research institutions </a>and large corporations to 
                   <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.tupl.com/" target="_blank" rel="noreferrer noopener" aria-label="Tupl (opens in a new tab)"> start-ups</a>.
                   <br/>
                   <br/>
