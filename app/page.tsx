@@ -341,7 +341,7 @@ export default function Home() {
                   <br/>
                   <br/>
                   Currently, I&apos;m a Software Engineer at 
-                  <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.keysight.com/" target="_blank" rel="noreferrer noopener" aria-label="Keysight Technologies (opens in a new tab)"> Keysight Technologies </a>
+                  <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://www.ericsson.com/" target="_blank" rel="noreferrer noopener" aria-label="Keysight Technologies (opens in a new tab)"> Ericsson </a>
                   where I contribute to the creation and maintenance of different services, ensuring best practices to deliver a robust user experience.
                   <br/>
                   <br/>
