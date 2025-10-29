@@ -12,7 +12,23 @@ import ProjectCard from "@/components/ProjectCard";
 
 const workCards = [
   {
-    period: "Nov 2023 - Present",
+    period: "Jan 2025 - Present",
+    description: (
+      <>
+        Design and development of software applications focused on the automatic detection and explainability of network anomalies through data analysis and artificial intelligence techniques.<br /><br />
+        Development of monitoring and performance analysis tools capable of processing large volumes of KPIs, detecting abnormal network behaviors, and generating daily reports and aggregated metrics.<br /><br />
+        Implementation of AI-driven explainability solutions aimed at identifying root causes and underlying patterns in detected issues, contributing to faster incident resolution.<br /><br />
+        Integration of these applications into a continuous end-to-end analysis and reporting flow, improving the efficiency of optimization teams and enhancing overall network performance.
+      </>
+    ),
+    href: "https://www.ericsson.com/",
+    label: "Software Engineer - Ericsson",
+    ariaLabel: "August 2023 to Present",
+    workAriaLabel: "Software Engineer at Ericsson.",
+    techUsed: ["Python", "Kubernetes", "TDD", "Jenkins", "Git"]
+  },
+  {
+    period: "Nov 2023 - Jan 2025",
     description: (
       <>
         Design and development of different personalized microservices for obtaining, managing and processing test case data, training of machine learning models and reordering of test cases.<br /><br />
@@ -56,7 +72,7 @@ const workCards = [
         Development and maintenance of the TuplOS platform. TuplOS is an Artificial Intelligence engine created by Tupl with the aim of simplifying the development of automation utilities and enabling the creation of a digital knowledge base for complex processes.
         <br/><br />
         Development of components for the retrieval and processing of satellite images, as well as for 
-        calculating statistics and histograms from them.<br/><br/>
+        calculating statistics and histograms from them.
       </>
     ),
     href: "https://www.tupl.com/",
@@ -83,19 +99,36 @@ const workCards = [
 
 const projectCards = [
   {
-    href: "https://riuma.uma.es/xmlui/handle/10630/27595",
-    image: "/angiography.png",
-    label: "Conorary Disease Detection System",
-    ariaLabel: "",
+    period: "2025",
+    href: "/apperfi.com",
+    image: "/perfi.png",
+    label: "PerFi",
+    ariaLabel: "PerFi (opens in a new tab)",
     description: (
       <>
-        System capable of recognizing a possible coronary disease from a segmented coronary angiogram in a specified number of windows.  <br />
-        Study of the system depending on the dataset, window size, and network architecture.
+        Web platform that brings together a set of financial tools to help users manage their personal finances easily and accurately. 
+        Developed with a focus on clarity, performance, and usability, it includes calculators for loan amortization, compound interest, 
+        net salary, and mortgage bonuses. All in one place and completely free.
       </>
     ),
-    techUsed: ["Python","Pytorch", "Deep Neural Networks"]
+    techUsed: ["TypeScript","Next.js", "Tailwind CSS"]
   },
   {
+    period: "2024",
+    href: "/",
+    image: "/portfolio.png",
+    label: "Personal Website",
+    ariaLabel: "Personal Website (opens in a new tab)",
+    description: (
+      <>
+        Modern, responsive, and fast personal portfolio website using Next.js 14, TypeScript, and Tailwind CSS. 
+        The site emphasizes performance and accessibility, providing an engaging user experience across all devices.
+      </>
+    ),
+    techUsed: ["TypeScript","Next.js", "Tailwind CSS"]
+  },
+  {
+    period: "2023",
     href: "https://github.com/galopg01/EpilepsyDetection",
     image: "/mask.png",
     label: "Epilepsy Detection System",
@@ -111,17 +144,18 @@ const projectCards = [
     techUsed: ["Python","Pytorch", "Deep Neural Networks"]
   },
   {
-    href: "/",
-    image: "/portfolio.png",
-    label: "Personal Website",
-    ariaLabel: "Personal Website (opens in a new tab)",
+    period: "2023",
+    href: "https://riuma.uma.es/xmlui/handle/10630/27595",
+    image: "/angiography.png",
+    label: "Coronary Disease Detection System",
+    ariaLabel: "",
     description: (
       <>
-        Modern, responsive, and fast personal portfolio website using Next.js 14, TypeScript, and Tailwind CSS. 
-        The site emphasizes performance and accessibility, providing an engaging user experience across all devices.
+        System capable of recognizing a possible coronary disease from a segmented coronary angiogram in a specified number of windows.  <br />
+        Study of the system depending on the dataset, window size, and network architecture.
       </>
     ),
-    techUsed: ["TypeScript","Next.js", "Tailwind CSS"]
+    techUsed: ["Python","Pytorch", "Deep Neural Networks"]
   }
 ];
 
