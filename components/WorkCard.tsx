@@ -57,7 +57,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ period, description, href, label, a
               </p>
             </div>
 
-            {/* botón Mostrar más (solo cuando está colapsado) */}
+            {/* botón Show more (solo cuando está colapsado) */}
             {isLong && !expanded && (
               <div className="mt-2" style={{ position: 'relative', zIndex: 60 }}>
                 <button
@@ -84,7 +84,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ period, description, href, label, a
                   className="text-sm font-medium text-teal-300 hover:underline"
                   aria-expanded={expanded}
                 >
-                  Mostrar más
+                  Show more
                 </button>
               </div>
             )}
